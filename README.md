@@ -34,3 +34,19 @@ The collected data has been stored in the Comma Separated Value file Zomato.csv.
 
 Install Airflow, Hadoop, Spark 
 
+
+
+
+Questions:
+
+Cities with maximum resturants?
+which cuisine famous in certain country/city?
+how per capita income affects food ordering behaviour?
+Resturants with maximum ratings?
+How votes affects the price rating(range) ?
+Top 5 popular ratings per counts?
+How Table booking and  online delievery increases or decreases food ordering?
+Which is most liked table booking or online delievery?
+Display cuisine having price rating 2 and food rating above 4?
+Count Resturants having no table booking and online delievery  but excellent ratings.
+

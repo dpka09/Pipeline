@@ -1,6 +1,5 @@
-# pipe_deepika_zomato
+# Data Storage:
 
-Data Storage:
 The collected data has been stored in the Comma Separated Value file Zomato.csv. Each restaurant in the dataset is uniquely identified by its Restaurant Id.
 
 • Restaurant Id: Unique id of every restaurant across various cities of the world
@@ -13,7 +12,7 @@ The collected data has been stored in the Comma Separated Value file Zomato.csv.
 
 • Cuisines: Cuisines offered by the restaurant
 
-• Cost per person: Cost for people in different currencies 
+• Cost per person: Cost for people in different currencies
 
 • Currency: Currency of the country
 
@@ -31,46 +30,67 @@ The collected data has been stored in the Comma Separated Value file Zomato.csv.
 
 • Votes: Number of ratings casted by people
 
+# Install Airflow, Hadoop, Spark
 
-Install Airflow, Hadoop, Spark 
+>git clone https://gitlab.com/fusedataengineering/pipe_one/pipe_deepika_zomato.git
 
->> git clone https://gitlab.com/fusedataengineering/pipe_one/pipe_deepika_zomato.git
->> Set environment variable for airflow :  export AIRFLOW_HOME=~/airflow
->> Initiate airflow database: airflow db init
->> Create user on airflow : 
-    airflow users create \
-    --username <username> \
-    --firstname <firstname> \
-    --lastname <lastname> \
-    --role Admin \
-    --email <email>
+>Set environment variable for airflow :  export AIRFLOW_HOME=~/airflow
 
->> start airflow web UI on daemon mode : airflow webserver -D
->> start airflow scheduler on daemon mode : airflow scheduler -D
- 
+>Initiate airflow database: airflow db init
 
+>Create user on airflow :
 
+    airflow users create /
+
+    --username  /
+    --firstname  /
+    --lastname  /
+    --role Admin /
+    --email 
 
 
-Questions:
 
-Cities with maximum resturants?
 
-which cuisine famous in certain country/city?
+start airflow web UI on daemon mode : 
 
-how per capita income affects food ordering behaviour?
+-- airflow webserver -D 
 
-Resturants with maximum ratings?
+start airflow scheduler on daemon mode : 
 
-How votes affects the price rating(range) ?
+-- airflow scheduler -D 
 
-Top 5 popular ratings per counts?
 
-How Table booking and  online delievery increases or decreases food ordering?
+# Questions:
 
-Which is most liked table booking or online delievery?
 
-Display cuisine having price rating 2 and food rating above 4?
+1. Cities with maximum resturants?
 
-Count Resturants having no table booking and online delievery  but excellent ratings.
+2. which cuisine famous in certain country/city?
 
+3. how per capita income affects food ordering behaviour?
+
+4. Resturants with maximum ratings?
+
+5. How votes affects the price rating(range) ?
+
+6. Top 5 popular ratings per counts?
+
+7. How Table booking and  online delievery increases or decreases food ordering?
+
+8. Which is most liked table booking or online delievery?
+
+9. Display cuisine having price rating 2 and food rating above 4?
+
+10. Count Resturants having no table booking and online delievery  but excellent ratings.
+
+11. Food rating and cost per person of countries having per capita income below 5000 .
+
+12. Which location/ city in a country is most profitable (has high orders) ?
+
+13. Restaurants having most number of branches.
+
+14. Top 10 resturants according to their expensiveness / high price.
+
+
+
+# Fuse folder contains the output from Airflow

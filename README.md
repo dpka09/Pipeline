@@ -1,6 +1,6 @@
-Data Storage:
+# Data Storage:
 
-The collected data has been stored in the Comma Separated Value file Zomato.csv. Each restaurant in the dataset is uniquely identified by its Restaurant Id.
+# The collected data has been stored in the Comma Separated Value file Zomato.csv. Each restaurant in the dataset is uniquely identified by its Restaurant Id.
 
 • Restaurant Id: Unique id of every restaurant across various cities of the world
 
@@ -30,18 +30,17 @@ The collected data has been stored in the Comma Separated Value file Zomato.csv.
 
 • Votes: Number of ratings casted by people
 
-Install Airflow, Hadoop, Spark
+# Install Airflow, Hadoop, Spark
 
+>>git clone https://gitlab.com/fusedataengineering/pipe_one/pipe_deepika_zomato.git
 
-git clone https://gitlab.com/fusedataengineering/pipe_one/pipe_deepika_zomato.git
+>>Set environment variable for airflow :  export AIRFLOW_HOME=~/airflow
 
-Set environment variable for airflow :  export AIRFLOW_HOME=~/airflow
+>>Initiate airflow database: airflow db init
 
-Initiate airflow database: airflow db init
+>>Create user on airflow :
 
-Create user on airflow :
-
-airflow users create 
+    airflow users create /
 
     --username  /
     --firstname  /

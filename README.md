@@ -1,6 +1,6 @@
 # Data Storage:
 
-# The collected data has been stored in the Comma Separated Value file Zomato.csv. Each restaurant in the dataset is uniquely identified by its Restaurant Id.
+The collected data has been stored in the Comma Separated Value file Zomato.csv. Each restaurant in the dataset is uniquely identified by its Restaurant Id.
 
 • Restaurant Id: Unique id of every restaurant across various cities of the world
 
@@ -53,11 +53,11 @@
 
 start airflow web UI on daemon mode : 
 
---airflow webserver -D /
+-- airflow webserver -D 
 
 start airflow scheduler on daemon mode : 
 
---airflow scheduler -D /
+-- airflow scheduler -D 
 
 
 # Questions:

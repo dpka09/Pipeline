@@ -1,0 +1,69 @@
+[2021-07-20 16:47:09,884] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: Fuse.fuse1 2021-07-19T00:02:00+00:00 [queued]>
+[2021-07-20 16:47:09,899] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: Fuse.fuse1 2021-07-19T00:02:00+00:00 [queued]>
+[2021-07-20 16:47:09,899] {taskinstance.py:1067} INFO - 
+--------------------------------------------------------------------------------
+[2021-07-20 16:47:09,899] {taskinstance.py:1068} INFO - Starting attempt 1 of 8
+[2021-07-20 16:47:09,899] {taskinstance.py:1069} INFO - 
+--------------------------------------------------------------------------------
+[2021-07-20 16:47:10,123] {taskinstance.py:1087} INFO - Executing <Task(PythonOperator): fuse1> on 2021-07-19T00:02:00+00:00
+[2021-07-20 16:47:10,127] {standard_task_runner.py:52} INFO - Started process 407183 to run task
+[2021-07-20 16:47:10,134] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'Fuse', 'fuse1', '2021-07-19T00:02:00+00:00', '--job-id', '321', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpl06vx0q7', '--error-file', '/tmp/tmpni8wu_6c']
+[2021-07-20 16:47:10,135] {standard_task_runner.py:77} INFO - Job 321: Subtask fuse1
+[2021-07-20 16:47:11,138] {logging_mixin.py:104} INFO - Running <TaskInstance: Fuse.fuse1 2021-07-19T00:02:00+00:00 [running]> on host deepika-Inspiron-5570
+[2021-07-20 16:47:12,781] {taskinstance.py:1280} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=sthadpka93@gmail.com
+AIRFLOW_CTX_DAG_OWNER=postgres
+AIRFLOW_CTX_DAG_ID=Fuse
+AIRFLOW_CTX_TASK_ID=fuse1
+AIRFLOW_CTX_EXECUTION_DATE=2021-07-19T00:02:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-07-19T00:02:00+00:00
+[2021-07-20 16:47:23,078] {python.py:151} INFO - Done. Returned value was: None
+[2021-07-20 16:47:23,083] {taskinstance.py:1184} INFO - Marking task as SUCCESS. dag_id=Fuse, task_id=fuse1, execution_date=20210719T000200, start_date=20210720T110209, end_date=20210720T110223
+[2021-07-20 16:47:23,174] {taskinstance.py:1245} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2021-07-20 16:47:23,199] {local_task_job.py:151} INFO - Task exited with return code 0
+[2021-07-20 17:02:42,821] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: Fuse.fuse1 2021-07-19T00:02:00+00:00 [queued]>
+[2021-07-20 17:02:42,896] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: Fuse.fuse1 2021-07-19T00:02:00+00:00 [queued]>
+[2021-07-20 17:02:42,897] {taskinstance.py:1067} INFO - 
+--------------------------------------------------------------------------------
+[2021-07-20 17:02:42,897] {taskinstance.py:1068} INFO - Starting attempt 1 of 8
+[2021-07-20 17:02:42,897] {taskinstance.py:1069} INFO - 
+--------------------------------------------------------------------------------
+[2021-07-20 17:02:43,060] {taskinstance.py:1087} INFO - Executing <Task(PythonOperator): fuse1> on 2021-07-19T00:02:00+00:00
+[2021-07-20 17:02:43,066] {standard_task_runner.py:52} INFO - Started process 413989 to run task
+[2021-07-20 17:02:43,072] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'Fuse', 'fuse1', '2021-07-19T00:02:00+00:00', '--job-id', '279', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp4o35qgff', '--error-file', '/tmp/tmp954kexvp']
+[2021-07-20 17:02:43,073] {standard_task_runner.py:77} INFO - Job 279: Subtask fuse1
+[2021-07-20 17:02:43,321] {logging_mixin.py:104} INFO - Running <TaskInstance: Fuse.fuse1 2021-07-19T00:02:00+00:00 [running]> on host deepika-Inspiron-5570
+[2021-07-20 17:02:43,822] {taskinstance.py:1280} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=sthadpka93@gmail.com
+AIRFLOW_CTX_DAG_OWNER=postgres
+AIRFLOW_CTX_DAG_ID=Fuse
+AIRFLOW_CTX_TASK_ID=fuse1
+AIRFLOW_CTX_EXECUTION_DATE=2021-07-19T00:02:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-07-19T00:02:00+00:00
+[2021-07-20 17:02:52,723] {python.py:151} INFO - Done. Returned value was: None
+[2021-07-20 17:02:52,728] {taskinstance.py:1184} INFO - Marking task as SUCCESS. dag_id=Fuse, task_id=fuse1, execution_date=20210719T000200, start_date=20210720T111742, end_date=20210720T111752
+[2021-07-20 17:02:54,243] {taskinstance.py:1245} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2021-07-20 17:02:54,478] {local_task_job.py:151} INFO - Task exited with return code 0
+[2021-07-20 18:00:06,050] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: Fuse.fuse1 2021-07-19T00:02:00+00:00 [queued]>
+[2021-07-20 18:00:06,233] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: Fuse.fuse1 2021-07-19T00:02:00+00:00 [queued]>
+[2021-07-20 18:00:06,233] {taskinstance.py:1067} INFO - 
+--------------------------------------------------------------------------------
+[2021-07-20 18:00:06,233] {taskinstance.py:1068} INFO - Starting attempt 1 of 8
+[2021-07-20 18:00:06,233] {taskinstance.py:1069} INFO - 
+--------------------------------------------------------------------------------
+[2021-07-20 18:00:06,363] {taskinstance.py:1087} INFO - Executing <Task(PythonOperator): fuse1> on 2021-07-19T00:02:00+00:00
+[2021-07-20 18:00:06,368] {standard_task_runner.py:52} INFO - Started process 541796 to run task
+[2021-07-20 18:00:06,379] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'Fuse', 'fuse1', '2021-07-19T00:02:00+00:00', '--job-id', '279', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpix7hyut3', '--error-file', '/tmp/tmpo_amkn2g']
+[2021-07-20 18:00:06,381] {standard_task_runner.py:77} INFO - Job 279: Subtask fuse1
+[2021-07-20 18:00:06,504] {logging_mixin.py:104} INFO - Running <TaskInstance: Fuse.fuse1 2021-07-19T00:02:00+00:00 [running]> on host deepika-Inspiron-5570
+[2021-07-20 18:00:08,266] {taskinstance.py:1280} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=sthadpka93@gmail.com
+AIRFLOW_CTX_DAG_OWNER=postgres
+AIRFLOW_CTX_DAG_ID=Fuse
+AIRFLOW_CTX_TASK_ID=fuse1
+AIRFLOW_CTX_EXECUTION_DATE=2021-07-19T00:02:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-07-19T00:02:00+00:00
+[2021-07-20 18:00:14,786] {python.py:151} INFO - Done. Returned value was: None
+[2021-07-20 18:00:14,789] {taskinstance.py:1184} INFO - Marking task as SUCCESS. dag_id=Fuse, task_id=fuse1, execution_date=20210719T000200, start_date=20210720T121506, end_date=20210720T121514
+[2021-07-20 18:00:14,875] {taskinstance.py:1245} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2021-07-20 18:00:14,914] {local_task_job.py:151} INFO - Task exited with return code 0

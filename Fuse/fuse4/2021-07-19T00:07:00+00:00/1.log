@@ -1,0 +1,25 @@
+[2021-07-20 20:19:48,276] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: Fuse.fuse4 2021-07-19T00:07:00+00:00 [queued]>
+[2021-07-20 20:19:48,287] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: Fuse.fuse4 2021-07-19T00:07:00+00:00 [queued]>
+[2021-07-20 20:19:48,287] {taskinstance.py:1067} INFO - 
+--------------------------------------------------------------------------------
+[2021-07-20 20:19:48,287] {taskinstance.py:1068} INFO - Starting attempt 1 of 8
+[2021-07-20 20:19:48,287] {taskinstance.py:1069} INFO - 
+--------------------------------------------------------------------------------
+[2021-07-20 20:19:48,362] {taskinstance.py:1087} INFO - Executing <Task(PythonOperator): fuse4> on 2021-07-19T00:07:00+00:00
+[2021-07-20 20:19:48,367] {standard_task_runner.py:52} INFO - Started process 1201857 to run task
+[2021-07-20 20:19:48,378] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'Fuse', 'fuse4', '2021-07-19T00:07:00+00:00', '--job-id', '334', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpcuuu5luk', '--error-file', '/tmp/tmpi8l7jz1y']
+[2021-07-20 20:19:48,380] {standard_task_runner.py:77} INFO - Job 334: Subtask fuse4
+[2021-07-20 20:19:48,535] {logging_mixin.py:104} INFO - Running <TaskInstance: Fuse.fuse4 2021-07-19T00:07:00+00:00 [running]> on host deepika-Inspiron-5570
+[2021-07-20 20:19:48,769] {taskinstance.py:1280} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=sthadpka93@gmail.com
+AIRFLOW_CTX_DAG_OWNER=postgres
+AIRFLOW_CTX_DAG_ID=Fuse
+AIRFLOW_CTX_TASK_ID=fuse4
+AIRFLOW_CTX_EXECUTION_DATE=2021-07-19T00:07:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-07-19T00:07:00+00:00
+[2021-07-20 20:19:58,150] {python.py:151} INFO - Done. Returned value was: None
+[2021-07-20 20:19:58,789] {taskinstance.py:1184} INFO - Marking task as SUCCESS. dag_id=Fuse, task_id=fuse4, execution_date=20210719T000700, start_date=20210720T143448, end_date=20210720T143458
+[2021-07-20 20:19:59,002] {local_task_job.py:196} WARNING - State of this instance has been externally set to success. Terminating instance.
+[2021-07-20 20:19:59,023] {process_utils.py:100} INFO - Sending Signals.SIGTERM to GPID 1201857
+[2021-07-20 20:19:59,109] {taskinstance.py:1264} ERROR - Received SIGTERM. Terminating subprocesses.
+[2021-07-20 20:19:59,157] {process_utils.py:66} INFO - Process psutil.Process(pid=1201857, status='terminated', exitcode=1, started='20:19:48') (1201857) terminated with exit code 1

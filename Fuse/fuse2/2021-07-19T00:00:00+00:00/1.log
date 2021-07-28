@@ -1,0 +1,122 @@
+[2021-07-20 16:45:17,427] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: Fuse.fuse2 2021-07-19T00:00:00+00:00 [queued]>
+[2021-07-20 16:45:17,439] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: Fuse.fuse2 2021-07-19T00:00:00+00:00 [queued]>
+[2021-07-20 16:45:17,439] {taskinstance.py:1067} INFO - 
+--------------------------------------------------------------------------------
+[2021-07-20 16:45:17,439] {taskinstance.py:1068} INFO - Starting attempt 1 of 8
+[2021-07-20 16:45:17,440] {taskinstance.py:1069} INFO - 
+--------------------------------------------------------------------------------
+[2021-07-20 16:45:17,519] {taskinstance.py:1087} INFO - Executing <Task(PythonOperator): fuse2> on 2021-07-19T00:00:00+00:00
+[2021-07-20 16:45:17,525] {standard_task_runner.py:52} INFO - Started process 406191 to run task
+[2021-07-20 16:45:17,537] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'Fuse', 'fuse2', '2021-07-19T00:00:00+00:00', '--job-id', '318', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpohm6r6d9', '--error-file', '/tmp/tmpjsvhafcl']
+[2021-07-20 16:45:17,539] {standard_task_runner.py:77} INFO - Job 318: Subtask fuse2
+[2021-07-20 16:45:17,766] {logging_mixin.py:104} INFO - Running <TaskInstance: Fuse.fuse2 2021-07-19T00:00:00+00:00 [running]> on host deepika-Inspiron-5570
+[2021-07-20 16:45:18,400] {taskinstance.py:1280} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=sthadpka93@gmail.com
+AIRFLOW_CTX_DAG_OWNER=postgres
+AIRFLOW_CTX_DAG_ID=Fuse
+AIRFLOW_CTX_TASK_ID=fuse2
+AIRFLOW_CTX_EXECUTION_DATE=2021-07-19T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-07-19T00:00:00+00:00
+[2021-07-20 16:45:36,633] {local_task_job.py:196} WARNING - State of this instance has been externally set to None. Terminating instance.
+[2021-07-20 16:45:36,662] {process_utils.py:100} INFO - Sending Signals.SIGTERM to GPID 406191
+[2021-07-20 16:45:36,663] {taskinstance.py:1264} ERROR - Received SIGTERM. Terminating subprocesses.
+[2021-07-20 16:45:36,663] {java_gateway.py:1210} INFO - Error while receiving.
+Traceback (most recent call last):
+  File "/opt/spark/python/lib/py4j-0.10.9-src.zip/py4j/java_gateway.py", line 1200, in send_command
+    answer = smart_decode(self.stream.readline()[:-1])
+  File "/usr/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "/home/deepika/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1266, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+[2021-07-20 16:45:36,667] {java_gateway.py:1050} ERROR - Exception while sending command.
+Traceback (most recent call last):
+  File "/opt/spark/python/lib/py4j-0.10.9-src.zip/py4j/java_gateway.py", line 1200, in send_command
+    answer = smart_decode(self.stream.readline()[:-1])
+  File "/usr/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "/home/deepika/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1266, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/spark/python/lib/py4j-0.10.9-src.zip/py4j/java_gateway.py", line 1033, in send_command
+    response = connection.send_command(command)
+  File "/opt/spark/python/lib/py4j-0.10.9-src.zip/py4j/java_gateway.py", line 1211, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while receiving
+[2021-07-20 16:45:36,668] {taskinstance.py:1481} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/deepika/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1137, in _run_raw_task
+    self._prepare_and_execute_task_with_callbacks(context, task)
+  File "/home/deepika/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1311, in _prepare_and_execute_task_with_callbacks
+    result = self._execute_task(context, task_copy)
+  File "/home/deepika/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1341, in _execute_task
+    result = task_copy.execute(context=context)
+  File "/home/deepika/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 150, in execute
+    return_value = self.execute_callable()
+  File "/home/deepika/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 161, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/home/deepika/airflow/dags/dag.py", line 12, in fuse_task2
+    load_df(task2(), 2)
+  File "/home/deepika/airflow/dags/main.py", line 24, in load_df
+    df.write.jdbc(url=url,
+  File "/opt/spark/python/pyspark/sql/readwriter.py", line 1445, in jdbc
+    self.mode(mode)._jwrite.jdbc(url, table, jprop)
+  File "/opt/spark/python/lib/py4j-0.10.9-src.zip/py4j/java_gateway.py", line 1304, in __call__
+    return_value = get_return_value(
+  File "/opt/spark/python/pyspark/sql/utils.py", line 111, in deco
+    return f(*a, **kw)
+  File "/opt/spark/python/lib/py4j-0.10.9-src.zip/py4j/protocol.py", line 334, in get_return_value
+    raise Py4JError(
+py4j.protocol.Py4JError: An error occurred while calling o128.jdbc
+[2021-07-20 16:45:36,970] {taskinstance.py:1524} INFO - Marking task as UP_FOR_RETRY. dag_id=Fuse, task_id=fuse2, execution_date=20210719T000000, start_date=20210720T110017, end_date=20210720T110036
+[2021-07-20 16:45:38,263] {process_utils.py:66} INFO - Process psutil.Process(pid=406191, status='terminated', exitcode=1, started='16:45:16') (406191) terminated with exit code 1
+[2021-07-20 17:02:11,523] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: Fuse.fuse2 2021-07-19T00:00:00+00:00 [queued]>
+[2021-07-20 17:02:11,529] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: Fuse.fuse2 2021-07-19T00:00:00+00:00 [queued]>
+[2021-07-20 17:02:11,529] {taskinstance.py:1067} INFO - 
+--------------------------------------------------------------------------------
+[2021-07-20 17:02:11,529] {taskinstance.py:1068} INFO - Starting attempt 1 of 8
+[2021-07-20 17:02:11,529] {taskinstance.py:1069} INFO - 
+--------------------------------------------------------------------------------
+[2021-07-20 17:02:11,932] {taskinstance.py:1087} INFO - Executing <Task(PythonOperator): fuse2> on 2021-07-19T00:00:00+00:00
+[2021-07-20 17:02:11,936] {standard_task_runner.py:52} INFO - Started process 413535 to run task
+[2021-07-20 17:02:11,942] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'Fuse', 'fuse2', '2021-07-19T00:00:00+00:00', '--job-id', '278', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpkq69j31z', '--error-file', '/tmp/tmp9ol6v_9v']
+[2021-07-20 17:02:11,943] {standard_task_runner.py:77} INFO - Job 278: Subtask fuse2
+[2021-07-20 17:02:12,160] {logging_mixin.py:104} INFO - Running <TaskInstance: Fuse.fuse2 2021-07-19T00:00:00+00:00 [running]> on host deepika-Inspiron-5570
+[2021-07-20 17:02:14,461] {taskinstance.py:1280} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=sthadpka93@gmail.com
+AIRFLOW_CTX_DAG_OWNER=postgres
+AIRFLOW_CTX_DAG_ID=Fuse
+AIRFLOW_CTX_TASK_ID=fuse2
+AIRFLOW_CTX_EXECUTION_DATE=2021-07-19T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-07-19T00:00:00+00:00
+[2021-07-20 17:02:24,327] {python.py:151} INFO - Done. Returned value was: None
+[2021-07-20 17:02:24,365] {taskinstance.py:1184} INFO - Marking task as SUCCESS. dag_id=Fuse, task_id=fuse2, execution_date=20210719T000000, start_date=20210720T111711, end_date=20210720T111724
+[2021-07-20 17:02:26,089] {taskinstance.py:1245} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2021-07-20 17:02:26,121] {local_task_job.py:151} INFO - Task exited with return code 0
+[2021-07-20 17:59:39,474] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: Fuse.fuse2 2021-07-19T00:00:00+00:00 [queued]>
+[2021-07-20 17:59:39,490] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: Fuse.fuse2 2021-07-19T00:00:00+00:00 [queued]>
+[2021-07-20 17:59:39,490] {taskinstance.py:1067} INFO - 
+--------------------------------------------------------------------------------
+[2021-07-20 17:59:39,491] {taskinstance.py:1068} INFO - Starting attempt 1 of 8
+[2021-07-20 17:59:39,491] {taskinstance.py:1069} INFO - 
+--------------------------------------------------------------------------------
+[2021-07-20 17:59:39,613] {taskinstance.py:1087} INFO - Executing <Task(PythonOperator): fuse2> on 2021-07-19T00:00:00+00:00
+[2021-07-20 17:59:39,619] {standard_task_runner.py:52} INFO - Started process 541497 to run task
+[2021-07-20 17:59:39,632] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'Fuse', 'fuse2', '2021-07-19T00:00:00+00:00', '--job-id', '278', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp4dywcmq5', '--error-file', '/tmp/tmp172r1cjm']
+[2021-07-20 17:59:39,634] {standard_task_runner.py:77} INFO - Job 278: Subtask fuse2
+[2021-07-20 17:59:39,903] {logging_mixin.py:104} INFO - Running <TaskInstance: Fuse.fuse2 2021-07-19T00:00:00+00:00 [running]> on host deepika-Inspiron-5570
+[2021-07-20 17:59:41,486] {taskinstance.py:1280} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=sthadpka93@gmail.com
+AIRFLOW_CTX_DAG_OWNER=postgres
+AIRFLOW_CTX_DAG_ID=Fuse
+AIRFLOW_CTX_TASK_ID=fuse2
+AIRFLOW_CTX_EXECUTION_DATE=2021-07-19T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-07-19T00:00:00+00:00
+[2021-07-20 17:59:53,024] {python.py:151} INFO - Done. Returned value was: None
+[2021-07-20 17:59:53,030] {taskinstance.py:1184} INFO - Marking task as SUCCESS. dag_id=Fuse, task_id=fuse2, execution_date=20210719T000000, start_date=20210720T121439, end_date=20210720T121453
+[2021-07-20 17:59:53,268] {taskinstance.py:1245} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2021-07-20 17:59:53,295] {local_task_job.py:151} INFO - Task exited with return code 0

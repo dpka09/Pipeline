@@ -1,0 +1,23 @@
+[2021-07-20 19:16:19,765] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: Fuse.fuse4 2021-07-19T00:05:00+00:00 [queued]>
+[2021-07-20 19:16:19,776] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: Fuse.fuse4 2021-07-19T00:05:00+00:00 [queued]>
+[2021-07-20 19:16:19,776] {taskinstance.py:1067} INFO - 
+--------------------------------------------------------------------------------
+[2021-07-20 19:16:19,776] {taskinstance.py:1068} INFO - Starting attempt 1 of 8
+[2021-07-20 19:16:19,776] {taskinstance.py:1069} INFO - 
+--------------------------------------------------------------------------------
+[2021-07-20 19:16:19,851] {taskinstance.py:1087} INFO - Executing <Task(PythonOperator): fuse4> on 2021-07-19T00:05:00+00:00
+[2021-07-20 19:16:19,856] {standard_task_runner.py:52} INFO - Started process 874703 to run task
+[2021-07-20 19:16:19,866] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'Fuse', 'fuse4', '2021-07-19T00:05:00+00:00', '--job-id', '315', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpfsygozgl', '--error-file', '/tmp/tmplg82wpmc']
+[2021-07-20 19:16:19,867] {standard_task_runner.py:77} INFO - Job 315: Subtask fuse4
+[2021-07-20 19:16:19,990] {logging_mixin.py:104} INFO - Running <TaskInstance: Fuse.fuse4 2021-07-19T00:05:00+00:00 [running]> on host deepika-Inspiron-5570
+[2021-07-20 19:16:21,475] {taskinstance.py:1280} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=sthadpka93@gmail.com
+AIRFLOW_CTX_DAG_OWNER=postgres
+AIRFLOW_CTX_DAG_ID=Fuse
+AIRFLOW_CTX_TASK_ID=fuse4
+AIRFLOW_CTX_EXECUTION_DATE=2021-07-19T00:05:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-07-19T00:05:00+00:00
+[2021-07-20 19:16:29,830] {python.py:151} INFO - Done. Returned value was: None
+[2021-07-20 19:16:29,834] {taskinstance.py:1184} INFO - Marking task as SUCCESS. dag_id=Fuse, task_id=fuse4, execution_date=20210719T000500, start_date=20210720T133119, end_date=20210720T133129
+[2021-07-20 19:16:29,947] {taskinstance.py:1245} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2021-07-20 19:16:30,072] {local_task_job.py:151} INFO - Task exited with return code 0

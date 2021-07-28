@@ -53,11 +53,11 @@
 
 start airflow web UI on daemon mode : 
 
-airflow webserver -D /
+--airflow webserver -D /
 
 start airflow scheduler on daemon mode : 
 
-airflow scheduler -D/
+--airflow scheduler -D /
 
 
 # Questions:

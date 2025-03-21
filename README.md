@@ -30,34 +30,39 @@ The collected data has been stored in the Comma Separated Value file Zomato.csv.
 
 • Votes: Number of ratings casted by people
 
-# Install Airflow, Hadoop, Spark
+---
+***Install Airflow, Hadoop, Spark***
 
 >git clone https://gitlab.com/fusedataengineering/pipe_one/pipe_deepika_zomato.git
 
->Set environment variable for airflow :  export AIRFLOW_HOME=~/airflow
+>Set environment variable for airflow :
 
->Initiate airflow database: airflow db init
+        export AIRFLOW_HOME=~/airflow
+
+>Initiate airflow database:
+
+         airflow db init
 
 >Create user on airflow :
 
-    airflow users create /
-
-    --username  /
-    --firstname  /
-    --lastname  /
-    --role Admin /
-    --email 
+        airflow users create /
+    
+        --username  /
+        --firstname  /
+        --lastname  /
+        --role Admin /
+        --email 
 
 
 
 
 start airflow web UI on daemon mode : 
 
--- airflow webserver -D 
+         airflow webserver -D 
 
 start airflow scheduler on daemon mode : 
-
--- airflow scheduler -D 
+        
+        airflow scheduler -D 
 
 
 # Questions:
@@ -93,4 +98,4 @@ start airflow scheduler on daemon mode :
 
 
 
-# Fuse folder contains the output from Airflow
+***Fuse folder contains the output from Airflow***

@@ -54,7 +54,7 @@ The collected data has been stored in the Comma Separated Value file Zomato.csv.
 ---
 ***Install Airflow, Hadoop, Spark***
 
->git clone https://gitlab.com/fusedataengineering/pipe_one/pipe_deepika_zomato.git
+>git clone [https://gitlab.com/fusedataengineering/pipe_one/pipe_deepika_zomato.git](https://github.com/dpka09/Zomato-DataAnalysis-Using-Pyspark.git)
 
 >Set environment variable for airflow :
 

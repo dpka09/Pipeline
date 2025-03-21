@@ -31,6 +31,27 @@ The collected data has been stored in the Comma Separated Value file Zomato.csv.
 • Votes: Number of ratings casted by people
 
 ---
+
+### Working Mechanism
+
+![image](https://github.com/user-attachments/assets/0a78469e-82cb-49d2-92f5-a4cb2ef940fa)
+
+***Download Dataset:*** The process begins with downloading a dataset from Kaggle.
+
+***Normalize Dataset:*** The dataset undergoes normalization to standardize and prepare the data for further processing.
+
+***Load to HDFS:*** The normalized dataset is then loaded into Hadoop Distributed File System (HDFS) for storage and processing.
+
+***Use Airflow:***
+
+- Airflow orchestrates the workflow:
+
+          -Reads data from HDFS using PySpark.
+          -Processes the data.
+          -Loads the processed results into a Postgres database.
+
+
+---
 ***Install Airflow, Hadoop, Spark***
 
 >git clone https://gitlab.com/fusedataengineering/pipe_one/pipe_deepika_zomato.git
